@@ -1,6 +1,6 @@
 # Challenge Mercado Libre (Front End)
 
-_Solución al problema planteado en Front-End Práctico.pdf (se encuentra en el repo).
+_Solución al problema planteado en Front-End Práctico.pdf (se encuentra en el repo)._
 
 **Desarrollado por Fabián Soligo.**
 
@@ -22,19 +22,22 @@ Node / NPM
 
 ### Instalación
 
-_Clonar el Repositorio
+_Clonar el Repositorio_
 ```
 git clone https://github.com/fabisoligo/challenge-meli.git
 ```
 
-Instalar las dependencias del proyecto
+
+_Instalar las dependencias del proyecto_
 ```
 npm i
 ```
 
-_Iniciar la aplicación
+
+_Iniciar la aplicación_
 ```
 npm start
 ```
 
-_Abrir el siguiente [enlace](http://localhost:4040)
+
+_Abrir el siguiente [enlace](http://localhost:4040)_
