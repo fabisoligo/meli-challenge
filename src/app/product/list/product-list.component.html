@@ -1,0 +1,50 @@
+<ng-container *ngIf="!!breadcumb">
+    <div class="mx-4 mt-2 mb-2 flex flex-row flex-wrap text-xs text-gray-600">
+        <div *ngFor="let itemBreacumb of breadcumb;trackBy:sharedHelperService.trackByFn;last as isLast;">
+            <span> {{itemBreacumb}} </span>
+            <span *ngIf="!isLast"
+                  class="mx-1"> > </span>
+        </div>
+    </div>
+</ng-container>
+<main class="bg-white rounded mb-4 shadow">
+    <div *ngIf="loading$ | async"
+         class="text-title p-8">
+        Buscando...</div>
+    <div *ngIf="!(loading$ | async) && productList.length === 0"
+         class="text-title p-8">
+        No se encontraron resultados para tu búsuqeda.</div>
+    <ng-container *ngIf="!!productList">
+        <article *ngFor="let productItem of productList;trackBy:sharedHelperService.trackByFn;last as last;"
+                 class="hover:shadow-md shadow">
+            <a [routerLink]="['/items',productItem.id]">
+                <div class="flex flex-row p-2 pr-4">
+                    <img class="rounded"
+                         alt="Imagen de {{productItem.title}}"
+                         [src]="productItem.picture" />
+                    <div class="flex flex-1 flex-row">
+                        <div class="pl-4 pr-2 py-1 flex flex-1 flex-col">
+                            <div class="flex flex-row">
+                                <span
+                                      class="text-base">{{productItem.price.amount | currency : '$' : 'symbol' : '1.0-0'}}</span>
+                                <div *ngIf="
+                     productItem.free_shipping"
+                                     title="Envío gratis"
+                                     class="shadow self-center ml-4 bg-green-500 rounded-full h-3 w-3">
+                                </div>
+                            </div>
+                            <h2 class="text-xs">
+                                {{productItem.title}}
+                            </h2>
+                        </div>
+                        <div class="w-1/4 md:w-24 ">
+                            <span class="text-sm text-gray-600 py-1">
+                                {{productItem.state_name}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </ng-container>
+</main>

@@ -1,0 +1,18 @@
+<header class="header-wrapper py-2 shadow">
+    <div class="container mx-auto flex flex-row">
+        <a class="logo-brand mr-6"
+           href="/"></a>
+        <form class="flex flex-row flex-1"
+              (ngSubmit)="searchForm.valid && sendSearch()"
+              [formGroup]="searchForm">
+            <input formControlName="search"
+                   class="outline-none px-2 flex-1 rounded-l placeholder-gray-500 shadow"
+                   placeholder="Nunca dejes de buscar"
+                   type="text" />
+            <button type="submit"
+                    class="w-8 bg-gray-300 shadow hover:shadow-md">
+                <i class="fa fa-search text-gray-600 rounded-r"></i>
+            </button>
+        </form>
+    </div>
+</header>

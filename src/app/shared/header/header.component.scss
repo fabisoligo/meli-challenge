@@ -1,0 +1,15 @@
+.header-wrapper {
+    background-color: #fff159;
+    .logo-brand {
+        background-image: url('/assets/logo_small.png');
+        width: 44px;
+        height: 32px;
+    }
+    form {
+        input {
+            &:focus {
+                border-color: #fff159 !important;
+            }
+        }
+    }
+}
