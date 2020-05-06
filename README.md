@@ -24,9 +24,13 @@ Node / NPM
 
 _Clonar el Repositorio_
 ```
-git clone https://github.com/fabisoligo/challenge-meli.git
+git clone https://github.com/fabisoligo/meli-challenge.git
 ```
 
+_Entrar en la carpeta del proyecto_
+```
+cd meli-challenge
+```
 
 _Instalar las dependencias del proyecto_
 ```
